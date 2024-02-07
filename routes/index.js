@@ -14,6 +14,24 @@ const messages = [
   }
 ];
 
+const formatDate = (date) => {
+  const options = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    hour12: true, // Use 24-hour format
+  };
+
+  return date.toLocaleString('en-US', options);
+}
+
+messages.forEach(message => {
+  message.added = formatDate(message.added);
+})
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Mini Message Board', messages: messages });
