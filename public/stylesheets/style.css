@@ -6,6 +6,8 @@
 
 :root {
   --article-colour: #d1cdcd;
+  --button-colour: #333230;
+  --hover-colour: #545350;
 }
 
 body {
@@ -21,10 +23,7 @@ main {
 
 h1 {
   margin-top: 5rem;
-}
-
-.messages-container {
-  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 article {
@@ -45,4 +44,52 @@ article .top-row {
 .name {
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+form {
+  background-color: var(--article-colour);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.form-input {
+  padding: 1rem;
+}
+
+.form-input:first-child {
+  margin-bottom: 1rem;
+}
+
+.form-input label {
+  font-size: 1.2rem;
+}
+
+.form-input input,
+.form-input textarea {
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-button {
+  padding: 1rem;
+}
+
+button {
+  background-color: var(--button-colour);
+  color: white;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 4px;
+
+  transition: background-color 0.3s ease-in-out,
+              transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--hover-colour);
+  transform: scale(1.1);
 }

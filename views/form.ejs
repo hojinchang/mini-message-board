@@ -11,15 +11,16 @@
     </head>
     <body>
         <main>
-            <h1><$= title %></h1>
+            <h1><%= title %></h1>
             <form method="POST" action="/new">
                 <div class="form-input">
                     <label for="name">Your Name:</label>
-                    <input type="text" id="name" value="name" placeholder="Hojin" />
+                    <input type="text" id="name" name="name" placeholder="Hojin" />
                 </div>
                 <div class="form-input">
                     <label for="message">Message:</label>
-                    <input type="text" id="message" value="message" />
+                    <!-- <input type="text" id="message" name="message" /> -->
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea>
                 </div>
 
                 <div class="form-button">
