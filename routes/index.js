@@ -44,12 +44,12 @@ router.get('/new', function(req, res, next) {
 // Post request from the form
 router.post('/new', function(req, res) {
   // Get the form inputs
-  const name = req.body.username;
+  const name = req.body.name;
   const message = req.body.message;
   const added = formatDate(new Date());
 
   // Push the new message into message array
-  message.push({
+  messages.push({
     text: message,
     user: name,
     added: added
