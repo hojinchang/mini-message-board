@@ -1,8 +1,40 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+:root {
+  --article-colour: #d1cdcd;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 5rem;
+}
+
+.messages-container {
+  margin-top: 3rem;
+}
+
+article {
+  padding: 1rem;
+  background-color: var(--article-colour);
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+article .top-row {
+  display: flex;
+  justify-content: space-between;
 }
